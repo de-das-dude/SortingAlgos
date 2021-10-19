@@ -19,11 +19,11 @@ public class SelectionSort {
 
 	public static void main(String[] args) {
 		SelectionSort sort = new SelectionSort();
-		int[] arr = { 5, 2, 6, 7, 2, 5, 9, 45 };
+		int[] arr = { 5, 2, 18, 6, 7, 67, 5, 9, 45, 69 };
 
 		arr = sort.sortAsc(arr);
 
 		for (int i = 0; i < arr.length; i++)
-			System.out.print(arr[i] + " ");
+			System.out.print(arr[i] + ", ");
 	}
 }
