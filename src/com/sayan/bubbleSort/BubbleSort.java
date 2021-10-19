@@ -3,6 +3,8 @@ package com.sayan.bubbleSort;
 /**
  * In ascending sort, pushes the highest element in each iteration to the end
  * 
+ * if no sorts are done in one iteration => sorting is complete
+ * 
  * @author dedasdude
  *
  */
@@ -40,7 +42,7 @@ public class BubbleSort {
 
 		arr = sort.sortAsc(arr);
 
-		for (int i = 0; i < arr.length; i++)
-			System.out.print(arr[i] + ", ");
+		for (int x = 0; x < arr.length; x++)
+			System.out.print(arr[x] + ", ");
 	}
 }
