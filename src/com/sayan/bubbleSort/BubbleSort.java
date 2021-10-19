@@ -9,11 +9,11 @@ package com.sayan.bubbleSort;
 public class BubbleSort {
 
 	int[] sortAsc(int[] arr) {
-		int l = arr.length;
+		int n = arr.length;
 
-		for (int i = 0; i < l - 1; i++) {
+		for (int i = 0; i < n - 1; i++) {
 			boolean f = true;
-			for (int j = 0; j < l - i - 1; j++) {
+			for (int j = 0; j < n - i - 1; j++) {
 				if (arr[j] > arr[j + 1]) {
 					int temp = arr[j];
 					arr[j] = arr[j + 1];
