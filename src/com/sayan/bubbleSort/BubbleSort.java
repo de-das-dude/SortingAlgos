@@ -1,5 +1,11 @@
 package com.sayan.bubbleSort;
 
+/**
+ * In ascending sort, pushes the highest element in each iteration to the end
+ * 
+ * @author dedasdude
+ *
+ */
 public class BubbleSort {
 
 	int[] sortAsc(int[] arr) {
@@ -7,7 +13,7 @@ public class BubbleSort {
 
 		for (int i = 0; i < l - 1; i++) {
 			boolean f = true;
-			for (int j = 0; j < l - 1; j++) {
+			for (int j = 0; j < l - i - 1; j++) {
 				if (arr[j] > arr[j + 1]) {
 					int temp = arr[j];
 					arr[j] = arr[j + 1];
@@ -15,11 +21,14 @@ public class BubbleSort {
 					f = false;
 				}
 			}
-			if(f)
-			{
+			if (f) {
 				System.out.println("Completed in " + i + " iterations");
 				break;
 			}
+
+			for (int x = 0; x < arr.length; x++)
+				System.out.print(arr[x] + ", ");
+			System.out.println();
 		}
 
 		return arr;
@@ -27,11 +36,11 @@ public class BubbleSort {
 
 	public static void main(String[] args) {
 		BubbleSort sort = new BubbleSort();
-		int[] arr = { 5, 2, 18, 6, 7, 67, 5, 9, 45, 69 };
+		int[] arr = { 69, 67, 45, 18, 9, 7, 6, 5, 5, 2 };
 
 		arr = sort.sortAsc(arr);
 
 		for (int i = 0; i < arr.length; i++)
-			System.out.print(arr[i] + " ");
+			System.out.print(arr[i] + ", ");
 	}
 }
